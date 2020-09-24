@@ -1,0 +1,35 @@
+Devloping Data Product-Course Project
+========================================================
+author: Prakhar Gupta
+date: 24-09-2020
+autosize: true
+
+First Slide
+========================================================
+
+For more details on authoring R presentations please visit <https://support.rstudio.com/hc/en-us/articles/200486468>.
+
+- It must be done in Slidify or Rstudio Presenter
+- It must be 5 pages
+- It must be hosted on github or Rpubs
+- It must contained some embedded R code that gets run when slidifying the document
+
+Slide With Code
+========================================================
+
+```{r}
+library(shiny)
+library(ggplot2)
+data("diamonds")
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+p <- ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point()
+    p <- p + geom_smooth(method = "lm") + xlab("Carat") + ylab("Price")
+    p <- p + xlim(0, 6) + ylim (0, 20000)
+    p
+
+```
